@@ -18,6 +18,16 @@ We evaluated all models after 200 epochs of training on 64x64 images. The scores
 | **SAGAN** | 51.35 | High diversity, slightly more artifacts than WGAN. |
 | **USE-CMHSA-GAN** | 163.23 | Experimental (Needs more tuning). |
 
+---
+
+## 📈 Visual Results & Monitoring
+
+For each model, we have generated high-resolution visualizations of the training process:
+
+*   **Loss Curves**: View the Generator vs Discriminator training stability in `outputs/<model>/reports/loss_curves.png`.
+*   **Image Samples**: Progression grids of generated faces across epochs are stored in `outputs/<model>/samples/`.
+*   **TensorBoard Logs**: Full interactive telemetry can be viewed by running `tensorboard --logdir outputs/`.
+
 > [!IMPORTANT]
 > **WGAN-GP** emerged as the clear winner, achieving the best visual clarity and the lowest FID score by a significant margin. This highlights the effectiveness of the Wasserstein distance in modeling the complex distributions of anime art.
 
